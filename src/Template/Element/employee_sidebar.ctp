@@ -9,7 +9,7 @@
                 <ul class="nav navbar-nav side-nav">
 					
                     <li >
-                        <span class="menu-header">Employee Panel<span>
+                        <span class="menu-header">Admin Panel<span>
                     </li>
 
                     <li class="active">

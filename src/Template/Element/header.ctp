@@ -127,10 +127,19 @@
             </ul>
             
             <?php 
-            dump($user_group);          
-            dump($groups); die;          
-			
+            //echo $user_group; die;
+            
+            switch($user_group){
+				case 'Employees' : 
+					echo $this->element('employee_sidebar'); 
+					break;
+				case 'Admin' :
+					echo $this->element('admin_sidebar');  
+					break;
+				default : 
+					echo $this->element('admin_sidebar'); 
+					break;
+			}
             ?>
-            <?= $this->element('admin_sidebar'); ?>
             
         </nav>
