@@ -2607,3 +2607,127 @@ Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
 
 
 
+2017-05-19 18:44:43 Notice: Notice (8): Undefined index: role in [/var/www/cakephp3/src/Controller/AppController.php, line 116]
+Request URL: /admin/users/dashboard
+Referer URL: http://localhost/cakephp3/admin
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+App\Controller\AppController::isAuthorized() - APP/Controller/AppController.php, line 116
+Cake\Auth\ControllerAuthorize::authorize() - CORE/src/Auth/ControllerAuthorize.php, line 93
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE/src/Controller/Component/AuthComponent.php, line 536
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 317
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-05-19 18:44:55 Notice: Notice (8): Undefined index: user_group in [/var/www/cakephp3/src/Controller/AppController.php, line 116]
+Request URL: /admin/users/dashboard
+Referer URL: http://localhost/cakephp3/admin
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+App\Controller\AppController::isAuthorized() - APP/Controller/AppController.php, line 116
+Cake\Auth\ControllerAuthorize::authorize() - CORE/src/Auth/ControllerAuthorize.php, line 93
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE/src/Controller/Component/AuthComponent.php, line 536
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 317
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-05-19 18:45:42 Notice: Notice (8): Undefined index: group_name in [/var/www/cakephp3/src/Controller/AppController.php, line 117]
+Request URL: /admin/users/dashboard
+Referer URL: http://localhost/cakephp3/admin
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+App\Controller\AppController::isAuthorized() - APP/Controller/AppController.php, line 117
+Cake\Auth\ControllerAuthorize::authorize() - CORE/src/Auth/ControllerAuthorize.php, line 93
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE/src/Controller/Component/AuthComponent.php, line 536
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 317
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2017-05-19 18:45:43 Notice: Notice (8): Undefined index: group_name in [/var/www/cakephp3/src/Controller/AppController.php, line 117]
+Request URL: /admin/users/dashboard
+Referer URL: http://localhost/cakephp3/admin
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 153
+App\Controller\AppController::isAuthorized() - APP/Controller/AppController.php, line 117
+Cake\Auth\ControllerAuthorize::authorize() - CORE/src/Auth/ControllerAuthorize.php, line 93
+Cake\Controller\Component\AuthComponent::isAuthorized() - CORE/src/Controller/Component/AuthComponent.php, line 536
+Cake\Controller\Component\AuthComponent::authCheck() - CORE/src/Controller/Component/AuthComponent.php, line 317
+Cake\Controller\Component\AuthComponent::startup() - CORE/src/Controller/Component/AuthComponent.php, line 268
+Cake\Event\EventManager::_callListener() - CORE/src/Event/EventManager.php, line 414
+Cake\Event\EventManager::dispatch() - CORE/src/Event/EventManager.php, line 391
+Cake\Controller\Controller::dispatchEvent() - CORE/src/Event/EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE/src/Controller/Controller.php, line 506
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 114
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 80
+[main] - ROOT/webroot/index.php, line 37
+
+
+
