@@ -1,0 +1,36 @@
+/* custom.css */
+
+.actions-menu {
+    padding: 0px 15px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    
+}
+
+.actions-menu li.heading {
+	font-weight : bold;
+}
+
+.actions-menu li {
+	float : left;
+	margin-left : 10px;
+}
+
+.red
+{
+	color : #FF0000;
+}
+
+.menu-header
+{
+	color: #fff;background-color: #080808;width: 225px;padding-top: 15px;
+	padding-bottom: 15px;position: relative;
+	display: block;
+	padding: 10px 15px;
+	padding-left: 36px;
+	font-size: 18px;
+}
