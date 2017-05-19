@@ -16498,3 +16498,129 @@ Stack Trace:
 2017-05-19 16:17:10 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 2017-05-19 16:17:12 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 2017-05-19 16:17:12 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:19:21 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:19:21 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:19:29 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:19:36 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:19:44 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:23:15 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:23:25 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:31:50 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:31:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:31:55 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:43:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:43:53 Error: [Cake\Core\Exception\Exception] App\Controller\UsersController does not implement an isAuthorized() method.
+Request URL: /users
+Referer URL: http://localhost/cakephp3/groups
+Stack Trace:
+#0 /var/www/cakephp3/vendor/cakephp/cakephp/src/Auth/ControllerAuthorize.php(58): Cake\Auth\ControllerAuthorize->controller(Object(App\Controller\UsersController))
+#1 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(547): Cake\Auth\ControllerAuthorize->__construct(Object(Cake\Controller\ComponentRegistry), Array)
+#2 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(501): Cake\Controller\Component\AuthComponent->constructAuthorize()
+#3 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(309): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(260): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventManager.php(422): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(116): Cake\Controller\Controller->startupProcess()
+#10 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(95): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#11 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#15 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#16 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 /var/www/cakephp3/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 /var/www/cakephp3/webroot/index.php(37): Cake\Http\Server->run()
+#22 {main}
+
+
+2017-05-19 16:44:14 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:44:14 Error: [BadMethodCallException] Method getParam does not exist
+Request URL: /users
+Referer URL: http://localhost/cakephp3/groups
+Stack Trace:
+#0 /var/www/cakephp3/src/Controller/AppController.php(109): Cake\Network\Request->__call('getParam', Array)
+#1 /var/www/cakephp3/vendor/cakephp/cakephp/src/Auth/ControllerAuthorize.php(93): App\Controller\AppController->isAuthorized(Array)
+#2 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(504): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#3 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(309): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(260): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventManager.php(422): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(116): Cake\Controller\Controller->startupProcess()
+#10 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(95): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#11 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#15 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#16 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 /var/www/cakephp3/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 /var/www/cakephp3/webroot/index.php(37): Cake\Http\Server->run()
+#22 {main}
+
+
+2017-05-19 16:44:58 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:44:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin could not be found.
+Exception Attributes: array (
+  'class' => 'Admin',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /admin/users
+Stack Trace:
+#0 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(92): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 /var/www/cakephp3/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 /var/www/cakephp3/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-05-19 16:45:02 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-05-19 16:45:02 Error: [BadMethodCallException] Method getParam does not exist
+Request URL: /users
+Referer URL: http://localhost/cakephp3/groups
+Stack Trace:
+#0 /var/www/cakephp3/src/Controller/AppController.php(109): Cake\Network\Request->__call('getParam', Array)
+#1 /var/www/cakephp3/vendor/cakephp/cakephp/src/Auth/ControllerAuthorize.php(93): App\Controller\AppController->isAuthorized(Array)
+#2 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(504): Cake\Auth\ControllerAuthorize->authorize(Array, Object(Cake\Network\Request))
+#3 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(309): Cake\Controller\Component\AuthComponent->isAuthorized(Array)
+#4 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(260): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventManager.php(422): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /var/www/cakephp3/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /var/www/cakephp3/vendor/cakephp/cakephp/src/Controller/Controller.php(501): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(116): Cake\Controller\Controller->startupProcess()
+#10 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(95): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#11 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#13 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(62): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#15 /var/www/cakephp3/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#16 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#17 /var/www/cakephp3/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#18 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#19 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#20 /var/www/cakephp3/vendor/cakephp/cakephp/src/Http/Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 /var/www/cakephp3/webroot/index.php(37): Cake\Http\Server->run()
+#22 {main}
+
+

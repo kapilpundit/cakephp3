@@ -63,7 +63,8 @@ class AppController extends Controller
 			'loginRedirect' => [
 				'controller' => 'Users',
 				'action' => 'index'
-			]
+			],
+			'authorize' => 'Controller',
 			//'storage' => 'Session'
 		]);
 		
@@ -102,6 +103,22 @@ class AppController extends Controller
         }
     }
     
+    public function isAuthorized($user = null)
+    {
+        // Any registered user can access public functions
+        if (!$this->request->getParam('prefix')) {
+            return true;
+        }
+
+        // Only admins can access admin functions
+        if ($this->request->getParam('prefix') === 'admin') {
+            return (bool)($user['role'] === 'admin');
+        }
+
+        // Default deny
+        return false;
+    }
+    
     public function manageLoggedInUser()
     {
 		$user = $this->Auth->user();
@@ -109,8 +126,8 @@ class AppController extends Controller
 		$this->set('logged_in_user', $logged_in_user);		
 		$this->set('user_group', $user['group']['group_name']);
 		
-		$groups = TableRegistry::get('Groups');
-		$groups = $groups->find()->all()->toArray();
-		$this->set('groups', $groups);
+		//$groups = TableRegistry::get('Groups');
+		//$groups = $groups->find()->all()->toArray();
+		//$this->set('groups', $groups);
 	}
 }

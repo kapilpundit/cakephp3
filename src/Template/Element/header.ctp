@@ -129,15 +129,15 @@
             <?php 
             //echo $user_group; die;
             
-            switch($user_group){
-				case 'Employees' : 
-					echo $this->element('employee_sidebar'); 
-					break;
+            switch($user_group){				
 				case 'Admin' :
 					echo $this->element('admin_sidebar');  
 					break;
+				case 'Employees' : 
+					echo $this->element('employee_sidebar'); 
+					break;
 				default : 
-					echo $this->element('admin_sidebar'); 
+					echo $this->element('employee_sidebar'); 
 					break;
 			}
             ?>
