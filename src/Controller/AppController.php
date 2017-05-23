@@ -112,9 +112,12 @@ class AppController extends Controller
 
         // Only admins can access admin functions
         if ($this->request->getParam('prefix') === 'admin') {
-            //echo "Admin"; die;
-            //dump($user); die;
             return (bool)($user['group']['group_name'] === 'Admin');
+        }
+
+        // Only employees can access admin functions
+        if ($this->request->getParam('prefix') === 'employees') {           
+            return (bool)($user['group']['group_name'] === 'Employees');
         }
 
         // Default deny
