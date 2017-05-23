@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller\Employees;
+namespace App\Controller;
 
 use App\Controller\AppController;
 
@@ -51,13 +51,14 @@ class LoginsController extends AppController
 			
 			// Login
 			if(isset($this->request->data['login-submit']))
-			{				
+			{
 				$user_identified = $this->Auth->identify();				
 				
 				//pr($user_identified['group']['group_name']); die;
 				
 				if ($user_identified) {
-										
+					//dump($user); die;
+					
 					if(!$user_identified['status'])
 					{
 						$this->Flash->error(__('Your account has been disabled'));
@@ -66,24 +67,22 @@ class LoginsController extends AppController
 					
 					$user = $users->get($user_identified['id']);					
 					
-					$user = $users->patchEntity($user, array('logged_in' => 1));
-					//dump($user); die;
+					$user->logged_in = 1;
+					//dump($user_identified); die;
 					
 					if ($users->save($user)) 
 					{
-						//dump($user_identified); die;
 						$this->Auth->setUser($user_identified);
-						
-						//return $this->redirect($this->Auth->redirectUrl());
-						//return $this->redirect(['controller' => 'Groups', 'action' => 'index']);
 						
 						$myurl = Router::url([
 									'controller' => 'users',
 									'action' => 'dashboard',
+									'prefix' => $user_identified['group']['prefix'],
 								], true);
 						
 						return $this->redirect($myurl);
 					}
+					
 					
 				} else {
 					$this->Flash->error(__('Username or password is incorrect'));

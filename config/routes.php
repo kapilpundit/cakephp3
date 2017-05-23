@@ -50,8 +50,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-    $routes->connect('/', ['controller' => 'Users', 'action' => 'index', 'index']);
-    $routes->connect('/dashboard/*', ['controller' => 'Users', 'action' => 'dashboard']);
+    
+    //$routes->connect('/', ['controller' => 'Users', 'action' => 'index', 'prefix' => 'employees']);
+    
+    $routes->connect('/', ['controller' => 'Logins', 'action' => 'index']);
+    
+    //$routes->connect('/dashboard/*', ['controller' => 'Users', 'action' => 'dashboard']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
@@ -78,17 +82,15 @@ Router::scope('/', function (RouteBuilder $routes) {
 });
 
 Router::prefix('admin', function ($routes) {
-    // All routes here will be prefixed with `/admin`
-    // And have the prefix => admin route element added.
     $routes->fallbacks(DashedRoute::class);
     $routes->connect('/', ['controller' => 'Logins', 'action' => 'index']);
+    $routes->connect('/dashboard/*', ['controller' => 'Users', 'action' => 'dashboard']);
 });
 
 Router::prefix('employees', function ($routes) {
-    // All routes here will be prefixed with `/admin`
-    // And have the prefix => admin route element added.
     $routes->fallbacks(DashedRoute::class);
     $routes->connect('/', ['controller' => 'Logins', 'action' => 'index']);
+    $routes->connect('/dashboard/*', ['controller' => 'Users', 'action' => 'dashboard']);
 });
 
 /**

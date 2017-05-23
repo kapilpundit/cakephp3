@@ -48,7 +48,7 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');        
         //$this->loadHelper('Session');
-        
+                
         $this->loadComponent('Auth', [
 			'loginAction' => [
 				'controller' => 'Logins',
@@ -67,6 +67,8 @@ class AppController extends Controller
 			'authorize' => 'Controller',
 			//'storage' => 'Session'
 		]);
+		
+		 $this->Auth->allow(['controller' => 'pages', 'action' => 'display']);
 		
 		$this->set('title', 'Default title comming from AppController.php');
 		$this->set('sub_title', 'Default sub title comming from AppController.php');
