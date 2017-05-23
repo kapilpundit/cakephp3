@@ -119,7 +119,7 @@
                         <li class="divider"></li>
                         <li>
 							<?= $this->Html->link('<i class="fa fa-fw fa-power-off"></i> Log Out', 
-												["controller"=>"logins", "action"=>"logout"], 
+												["controller"=>"logins", "action"=>"logout", "prefix" => false], 
 												["escape"=>false, "class"=>"myClass"]); ?>
                         </li>
                     </ul>
