@@ -28,8 +28,13 @@ class GroupsController extends AppController
      */
     public function index()
     {
-		//$this->paginate = ['contain' => ['UserGroups' => ['fields'=> ['UserGroups.group_id']]]];
         $groups = $this->paginate($this->Groups);
+		
+		
+		$this->set('title', 'Groups');
+		$this->set('sub_title', 'List');
+		
+		$this->set('breadcrumb', 'Groups');
 		
 		//dump($groups); die;
         $this->set(compact('groups'));
@@ -48,6 +53,12 @@ class GroupsController extends AppController
         $group = $this->Groups->get($id, [
             'contain' => []
         ]);
+        
+        
+		$this->set('title', 'Edit Group');
+		$this->set('sub_title', $group['group_name']);
+		
+		$this->set('breadcrumb', 'Edit Group');
 
         $this->set('group', $group);
         $this->set('_serialize', ['group']);
@@ -92,9 +103,17 @@ class GroupsController extends AppController
      */
     public function edit($id = null)
     {
-        $group = $this->Groups->get($id, [
+		$group = $this->Groups->get($id, [
             'contain' => []
         ]);
+        
+        //dump($group); die;
+		
+		$this->set('title', 'Edit Group');
+		$this->set('sub_title', $group['group_name']);
+		
+		$this->set('breadcrumb', 'Edit Group');
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
 			
 			$data = $this->request->data;
@@ -112,6 +131,7 @@ class GroupsController extends AppController
             }
             $this->Flash->error(__('The group could not be saved. Please, try again.'));
         }
+        
         $this->set(compact('group'));
         $this->set('_serialize', ['group']);
     }

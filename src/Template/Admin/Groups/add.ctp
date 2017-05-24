@@ -34,6 +34,10 @@
 						<td><?= $this->Form->control('group_name', ['class' => 'form-control']); ?></td>
 					</tr>
 					<tr>
+						<th scope="row"><?= __('Prefix') ?></th>
+						<td><?= $this->Form->control('prefix', ['class' => 'form-control']); ?></td>
+					</tr>
+					<tr>
 						<th scope="row"><?= __('Description') ?></th>
 						<td><?= $this->Form->control('description', ['class' => 'form-control', 'type'=>'textarea', 'rows'=>3]); ?></td>
 					</tr>

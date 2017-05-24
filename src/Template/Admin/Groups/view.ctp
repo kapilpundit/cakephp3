@@ -35,12 +35,12 @@
 										<td><?= h($group->group_name) ?></td>
 									</tr>
 									<tr>
-										<th scope="row"><?= __('Description') ?></th>
-										<td><?= h($group->description) ?></td>
+										<th scope="row"><?= __('Prefix') ?></th>
+										<td><?= h($group->prefix) ?></td>
 									</tr>
 									<tr>
-										<th scope="row"><?= __('Id') ?></th>
-										<td><?= $this->Number->format($group->id) ?></td>
+										<th scope="row"><?= __('Description') ?></th>
+										<td><?= h($group->description) ?></td>
 									</tr>
 									<tr>
 										<th scope="row"><?= __('Created Date') ?></th>
