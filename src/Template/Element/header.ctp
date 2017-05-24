@@ -108,7 +108,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            <?= $this->Html->link('<i class="fa fa-fw fa-user"></i> Profile', 
+												["controller"=>"users", "action"=>"profile"], 
+												["escape"=>false, "class"=>"myClass"]); ?>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>

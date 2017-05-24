@@ -32,5 +32,15 @@ class UsersController extends AppController
 		$this->set('sub_title', $user['fname'] . " " . $user['lname']);
 		$this->set('breadcrumb', 'Dashboard');
 	}
-        
+    
+    public function profile()
+    {
+		$user = $this->Auth->user();
+		//dump($user); die;
+		$this->set('title', 'My Profile');
+		$this->set('sub_title', $user['fname'] . " " . $user['lname']);
+		$this->set('breadcrumb', 'My Profile');
+		$this->set(compact('user'));
+	}
+       
 }

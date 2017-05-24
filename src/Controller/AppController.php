@@ -68,7 +68,7 @@ class AppController extends Controller
 			//'storage' => 'Session'
 		]);
 		
-		 $this->Auth->allow(['controller' => 'pages', 'action' => 'display']);
+		//$this->Auth->allow(['controller' => 'pages', 'action' => 'display']);
 		
 		$this->set('title', 'Default title comming from AppController.php');
 		$this->set('sub_title', 'Default sub title comming from AppController.php');
