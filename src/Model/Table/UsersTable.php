@@ -44,6 +44,11 @@ class UsersTable extends Table
             'foreignKey' => 'group_id',
             'joinType' => 'INNER'
         ]);
+
+        $this->hasOne('UserDetails', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**

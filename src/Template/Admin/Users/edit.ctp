@@ -54,10 +54,42 @@
 						<th scope="row"><?= __('Lname') ?></th>
 						<td><?= $this->Form->control('lname', ['class' => 'form-control']); ?></td>
 					</tr>
+					
+					<tr>
+						<th scope="row"><?= __('Address') ?></th>
+						<td><?= $this->Form->control('user_detail.address', ['class' => 'form-control']); ?></td>
+					</tr>
+					
+					<tr>
+						<th scope="row"><?= __('City') ?></th>
+						<td><?= $this->Form->control('user_detail.city', ['class' => 'form-control']); ?></td>
+					</tr>
+					
+					<tr>
+						<th scope="row"><?= __('PIN Code') ?></th>
+						<td><?= $this->Form->control('user_detail.pin_code', ['class' => 'form-control']); ?></td>
+					</tr>
+					
+					<tr>
+						<th scope="row"><?= __('State') ?></th>
+						<td><?= $this->Form->control('user_detail.state', ['class' => 'form-control']); ?></td>
+					</tr>
+					
+					<tr>
+						<th scope="row"><?= __('Country') ?></th>
+						<td><?= $this->Form->control('user_detail.country', ['class' => 'form-control']); ?></td>
+					</tr>
+					
+					<tr>
+						<th scope="row"><?= __('Contact') ?></th>
+						<td><?= $this->Form->control('user_detail.contact', ['class' => 'form-control']); ?></td>
+					</tr>
+					
 					<tr>
 						<th scope="row"><?= __('Status') ?></th>
 						<td><?= $this->Form->control('status', ['type' => 'checkbox']); ?></td>
 					</tr>
+					
 				</tbody>
 			</table>
 		</div>

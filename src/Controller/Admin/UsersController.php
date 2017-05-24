@@ -58,7 +58,7 @@ class UsersController extends AppController
     public function view($id = null)
     {		
         $user = $this->Users->get($id, [
-            'contain' => ['Groups']
+            'contain' => ['Groups', 'UserDetails']
         ]);
         
         //pr($user); die;
@@ -98,15 +98,7 @@ class UsersController extends AppController
 		
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {			
-			
-			//$password = $this->request->data['password'];
-			
-			
-			//$hasher = new DefaultPasswordHasher();
-			//$hash = $hasher->hash($password);
-			
-			//$this->request->data['password'] = $hash;
-			
+						
             $user = $this->Users->patchEntity($user, $this->request->data);
             
             // 	pr($user); die;
@@ -134,7 +126,10 @@ class UsersController extends AppController
     {
         $user = $this->Users->get($id, [
             //'contain' => ['Groups']
+            'contain' => ['UserDetails']
         ]);
+        
+        //pr($user); die;
         
         
         $this->set('title', 'Edit User');

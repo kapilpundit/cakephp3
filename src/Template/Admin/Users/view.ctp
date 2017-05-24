@@ -51,6 +51,30 @@
 										<td><?= h($user->lname) ?></td>
 									</tr>
 									<tr>
+										<th scope="row"><?= __('Address') ?></th>
+										<td><?= h($user->user_detail->address) ?></td>
+									</tr>
+									<tr>
+										<th scope="row"><?= __('City') ?></th>
+										<td><?= h($user->user_detail->city) ?></td>
+									</tr>
+									<tr>
+										<th scope="row"><?= __('PIN Code') ?></th>
+										<td><?= h($user->user_detail->pin_code) ?></td>
+									</tr>
+									<tr>
+										<th scope="row"><?= __('State') ?></th>
+										<td><?= h($user->user_detail->state) ?></td>
+									</tr>
+									<tr>
+										<th scope="row"><?= __('Country') ?></th>
+										<td><?= h($user->user_detail->country) ?></td>
+									</tr>
+									<tr>
+										<th scope="row"><?= __('Contact') ?></th>
+										<td><?= h($user->user_detail->contact) ?></td>
+									</tr>
+									<tr>
 										<th scope="row"><?= __('Status') ?></th>
 										<td><?= $user->status ? __('Active') : __('Inactive'); ?></td>
 									</tr>                                   

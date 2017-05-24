@@ -9,7 +9,7 @@
 						
 						<ul class="actions-menu">
                             <li class="heading"><?= __('Actions') ?></li>
-							<li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
+							<?php /*><li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li> */?>
                         </ul>
 						
 						
