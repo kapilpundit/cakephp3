@@ -84,12 +84,14 @@ Router::scope('/', function (RouteBuilder $routes) {
 Router::prefix('admin', function ($routes) {
     $routes->fallbacks(DashedRoute::class);
     $routes->connect('/', ['controller' => 'Logins', 'action' => 'index', 'prefix' => false]);
+    $routes->connect('/logins', ['controller' => 'Logins', 'action' => 'index', 'prefix' => false]);
     $routes->connect('/dashboard/*', ['controller' => 'Users', 'action' => 'dashboard']);
 });
 
 Router::prefix('employees', function ($routes) {
     $routes->fallbacks(DashedRoute::class);
     $routes->connect('/', ['controller' => 'Logins', 'action' => 'index', 'prefix' => false]);
+    $routes->connect('/logins', ['controller' => 'Logins', 'action' => 'index', 'prefix' => false]);
     $routes->connect('/dashboard/*', ['controller' => 'Users', 'action' => 'dashboard']);
 });
 

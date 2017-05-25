@@ -114,7 +114,14 @@ class UsersTable extends Table
 		$query
 			//->select(['id', 'username', 'password'])
 			//->where(['Users.status' => 1])
-			->contain(['Groups', 'UserDetails'])
+			->contain([
+				'Groups' => [
+							'fields' => [
+									'id', 'group_name', 'prefix'
+								]
+							], 
+				//'UserDetails' => []
+			])
 			;
 
 		return $query;

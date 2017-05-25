@@ -27,19 +27,30 @@ class UsersController extends AppController
     
     public function Dashboard($first=null, $second=null)
     {
-		$user = $this->Auth->user();				
+		$current_user = $this->Auth->user();
+		//dump($current_user); die;			
 		$this->set('title', 'Dashboard');
-		$this->set('sub_title', $user['fname'] . " " . $user['lname']);
+		$this->set('sub_title', $current_user['fname'] . " " . $current_user['lname']);
 		$this->set('breadcrumb', 'Dashboard');
 	}
     
     public function profile()
     {
-		$user = $this->Auth->user();
-		//dump($user); die;
+		$current_user = $this->Auth->user();
+		//dump($current_user);
 		$this->set('title', 'My Profile');
-		$this->set('sub_title', $user['fname'] . " " . $user['lname']);
+		$this->set('sub_title', $current_user['fname'] . " " . $current_user['lname']);
 		$this->set('breadcrumb', 'My Profile');
+		
+		$user = $this->Users->get($current_user['id'], [
+            'contain' => [
+							'Groups', 
+							'UserDetails'
+						]
+        ]);
+		
+		//dump($user); die;
+		
 		$this->set(compact('user'));
 	}
        
