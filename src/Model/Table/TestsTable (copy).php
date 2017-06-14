@@ -52,44 +52,34 @@ class TestsTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
-		
-		 $validator
-            ->add('name', 'notBlank', [
-                'rule' => 'notBlank',
-                'message' => 'You need to provide a name',
-            ]);
-		
-        //$validator
-            //->requirePresence('name', 'create')
-            //->notEmpty('name', 'You need to provide a name')            
-            //;
 
-        //$validator
-            //->email('email')
-            //->requirePresence('email', 'create')
-            //->notEmpty('email');
-            
-        $validator->add('email', 'valid', [
-			'rule' => 'email',
-			'message' => 'Invalid email'
-		]);
+        $validator
+            ->requirePresence('username', 'create')
+            ->notEmpty('username')
+            ;
 
-        //$validator
-            //->requirePresence('age', 'create')
-            //->notEmpty('age');
-		
-		 $validator
-            ->add('age', 'notBlank', [
-                'rule' => 'notBlank',
-                'message' => 'You need to provide some age',
-            ]);
+        $validator
+            ->email('email')
+            ->requirePresence('email', 'create')
+            ->notEmpty('email');
 
-		 $validator
-            ->add('age', 'length', [
-                'rule' => ['range', 0, 110],
-                'message' => 'Age Should be between 0 and 110',
-            ]);
-		
+        $validator
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
+
+        $validator
+            ->requirePresence('fname', 'create')
+            ->notEmpty('fname');
+
+        $validator
+            ->requirePresence('lname', 'create')
+            ->notEmpty('lname');
+
+        $validator
+            ->boolean('status')
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
+
         return $validator;
     }
 
@@ -109,12 +99,4 @@ class TestsTable extends Table
         return $rules;
     }
     
-    public function validationHardened(Validator $validator)
-	{
-		$validator = $this->validationDefault($validator);
-
-		//$validator->add('age', 'length', ['rule' => ['lengthBetween', 1, 3]]);
-		return $validator;
-	}
-        
 }
