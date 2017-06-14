@@ -83,12 +83,39 @@ class TestsController extends AppController
 			
 		}		
 		
+		
 		if ($this->request->is(['patch', 'post', 'put'])) {
 			$data = $this->request->data;
 					
             $test = $this->Tests->patchEntity($test, $data);
             
-            //dump($test); die;
+            if($data['remove_image'])
+            {
+				$fileName = null;
+			}
+			else{
+				// FILE UPLOAD CODE            
+				if(!empty($this->request->data['file']['name'])){
+					$fileName = $this->request->data['file']['name'];
+					$uploadPath = 'img/uploads/tests/';
+					$uploadFile = $uploadPath.$fileName;
+					
+					if(move_uploaded_file($this->request->data['file']['tmp_name'],$uploadFile)){
+					   $this->Flash->success(__('File uploaded successfully.'));
+					}else{
+						$this->Flash->error(__('Unable to upload file, please try again.'));
+					}
+				}
+				else{
+					if(!is_null($test->image)){
+						$fileName = $test->image;
+					}
+				}
+			}
+            
+            $test->image = !isset($fileName) ? null : $fileName;
+            
+            //dump($data['remove_image']); die;
             
             if ($this->Tests->save($test)) 
             {				
@@ -107,22 +134,23 @@ class TestsController extends AppController
 	
 	public function editAllTests()
 	{
-		//$tests = $this->Tests->find()
-								//->all()
-								//;
+		$tests = $this->Tests->find()
+								->all()
+								->toArray()
+								;
+								
+		$testCount = count($tests);
 		
 		$this->paginate = [
-			'limit' => 5,
+			'limit' => $testCount,
 		];
 				
         $tests = $this->paginate($this->Tests);
-		
+        		
 		if ($this->request->is(['patch', 'post', 'put'])) {
 			$data = $this->request->getData();
 			
 			$formattedData = []; 
-			
-			$i= 0;
 			
 			for($i=0; $i<count($data['id']); $i++){
 				

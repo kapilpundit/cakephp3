@@ -7,7 +7,7 @@
 
 				<div class="row">
                     <div class="col-lg-12">
-						<?= $this->Html->link(__('EditAllTests'), ['action' => 'editAllTests']) ?>
+						<?= $this->Html->link(__('Edit All Tests'), ['action' => 'editAllTests']) ?>
 					</div>
 				</div>
 

@@ -37,6 +37,10 @@
 										<th>Age</th>
 										<td><?= $test->age; ?></td>
 									</tr>                                
+									<tr>
+										<th>Image</th>
+										<td><?= $this->Html->image('uploads/tests/'.$test->image, ['alt' => 'No Image']); ?></td>
+									</tr>                                
                                 </tbody>
                             </table>
                         </div>
