@@ -94,7 +94,8 @@ class TestsController extends AppController
 				$fileName = null;
 			}
 			else{
-				// FILE UPLOAD CODE            
+				// FILE UPLOAD CODE
+				// If user is trying to upload an image         
 				if(!empty($this->request->data['file']['name'])){
 					$fileName = $this->request->data['file']['name'];
 					$uploadPath = 'img/uploads/tests/';
@@ -106,6 +107,7 @@ class TestsController extends AppController
 						$this->Flash->error(__('Unable to upload file, please try again.'));
 					}
 				}
+				// If the user did not upload any image, retain the old image
 				else{
 					if(!is_null($test->image)){
 						$fileName = $test->image;
