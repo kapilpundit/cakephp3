@@ -151,13 +151,10 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
 			
 			$data = $this->request->data;
-						
+			//dump($data);
             $user = $this->Users->patchEntity($user, $data);
+            //dump($user); die;
             
-			$user->status = !isset($data['status']) ? 0 : 1;
-            
-            //pr($user); die;
-                    
             if ($this->Users->save($user)) 
             {				
                 $this->Flash->success(__('The user has been saved.'));

@@ -17,6 +17,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\ORM\TableRegistry;
+use Cake\Core\Configure;
 
 /**
  * Application Controller
@@ -129,6 +130,8 @@ class AppController extends Controller
     public function manageLoggedInUser()
     {
 		$user = $this->Auth->user();
+		$userId = $this->Auth->user('id');
+		Configure::write('userId', $userId);
 		$logged_in_user = $user ? $this->Auth->user('fname') . ' ' . $this->Auth->user('lname') : null;
 		$this->set('logged_in_user', $logged_in_user);		
 		$this->set('user_group', $user['group']['group_name']);
